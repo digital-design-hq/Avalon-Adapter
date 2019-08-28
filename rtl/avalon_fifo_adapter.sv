@@ -8,7 +8,7 @@
 // not full, almost empty, or almost full (both almost's being configurable levels), and should have a
 // register to read the level
 
-always_ff @(posedge clk) begin
+//always_ff @(posedge clk) begin
     
-end
+//end
 

@@ -6,8 +6,8 @@ module avalon_register_adapter
       parameter LATENCY        = 1,
       parameter ADDRESSLATENCY = (LATENCY == 1) ? 1 : LATENCY - 1,
       parameter DATAOUTLATENCY = (LATENCY == 1) ? 0 : 1,
-      parameter POWEROF2REGS   = $clog2(REGS) ** 2,
-      parameter ADDRESSWIDTH   = $clog2(REGS))(
+      parameter ADDRESSWIDTH   = $clog2(REGS),
+      parameter POWEROF2REGS   = (1 << $clog2(REGS)))(
     input                   logic                      clk,
     input                   logic                      reset,
     input                   logic                      read,
